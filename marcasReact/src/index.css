@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start; /* cambia de center a flex-start para que no esté centrado verticalmente */
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Georgia', serif; /* fuente elegante */
+  font-size: 18px; /* texto más grande */
+  line-height: 1.6;
+  color: #222; /* color más legible */
+  background-color: #fff; /* fondo claro (puedes cambiar a oscuro si quieres) */
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+  text-align: left; /* fuerza que no se centre */
+}
+
+h2 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+  color: #0168d0;
+  text-align: left; /* fuerza que no se centre */
+}
+
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Para que los botones tengan buen tamaño */
+button {
+  border-radius: 8px;
+  border: 2px solid #007BFF;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  border-color: #0056b3;
+}
