@@ -47,11 +47,11 @@ export class MarcaRepository implements IMarcaRepository {
 
     try {
       return this.repo.findAndCount({
-      where: { deletedAt: IsNull() },
-      skip,
-      take: mostrar,                    //Esto nos devuelve el siguiente vector:
-      order: { id: 'ASC' },             //[elementos de la página, cantidad total de resultados (sin paginar)]
-    });                                 //Por eso la promesa es Marca[], number.
+      where: { deletedAt: IsNull() },     //TypeORM devuelve [elementos[], total]
+      skip,                              //elementos[]: Elementos de la página que solicitamos
+      take: mostrar,                    //total: cantidad total de registros]
+      order: { id: 'ASC' },            //Por eso la promesa es [CalculoImc[], number].
+    });
 
     } catch (error) {
       throw new InternalServerErrorException(`Error al paginar las marcas. Error:` + error);
